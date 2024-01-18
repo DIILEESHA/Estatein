@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureProperties = () => {
   return (
-    <div>FeatureProperties</div>
+    <div className='feauture_container'>FeatureProperties</div>
   )
 }
 
