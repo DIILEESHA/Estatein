@@ -11,6 +11,7 @@ const Home = () => {
       <Nav />
       <Header />
       <FeatureProperties />
+      <FeatureProperties />
     </div>
   );
 };

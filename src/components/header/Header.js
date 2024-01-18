@@ -53,13 +53,13 @@ const Header = () => {
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img src="https://i.imgur.com/W1gEE3D.png" alt="" />
+            <img src="https://i.imgur.com/9a4ouSN.png" alt="" />
           </div>
           <h2 className="property_linked_title">Unlock Property Value</h2>
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img src="https://i.imgur.com/W1gEE3D.png" alt="" />
+            <img src="https://i.imgur.com/EbFvvxX.png" alt="" />
           </div>
           <h2 className="property_linked_title">
             Effortless Property Management
@@ -67,7 +67,7 @@ const Header = () => {
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img src="https://i.imgur.com/W1gEE3D.png" alt="" />
+            <img src="https://i.imgur.com/fS4Ulor.png" alt="" />
           </div>
           <h2 className="property_linked_title">
             Smart Investments, Informed Decisions
