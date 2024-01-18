@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Urbanist", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --main-white: #fff;
+  --main-black: #000;
+  --purple: #703bf7;
+  --lg-purple: #ff7a00;
+  --bold-purple: #1a64ff;
+  --semi-purple: #ff9533;
+  --ultra-semi-purple: #ffca99;
+  --shade-purple: #ffe4cc;
+  --shade-purple1: #fff1e5;
+  --shade-purple2: #fff7f0;
+  --shade-purple3: #fffcfa;
+  --shade-white: #e4e4e7;
+  --shade-white1: #f1f1f3;
+  --shade-white2: #f7f7f8;
+  --shade-white3: #fcfcfd;
+  --shade-gray: #141414;
+  --shade-gray2: #1a1a1a;
+  --shade-gray3: #262626;
+  --shade-gray4: #333333;
+  --shade-gray5: #4d4d4d;
+  --shade-gray6: #666666;
+  --shade-gray7: #808080;
+  --shade-gray8: #999999;
 }
