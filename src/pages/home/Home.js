@@ -3,6 +3,7 @@ import SmNav from "../../components/smnav/SmNav";
 import Nav from "../../components/nav/Nav";
 import Header from "../../components/header/Header";
 import FeatureProperties from "../../components/feautrue-properties/FeatureProperties";
+import Client from "../../components/client/Client";
 
 const Home = () => {
   return (
@@ -11,13 +12,9 @@ const Home = () => {
       <Nav />
       <Header />
       <FeatureProperties />
-      <FeatureProperties />
+      <Client />
     </div>
   );
 };
 
 export default Home;
-
-
-
-
