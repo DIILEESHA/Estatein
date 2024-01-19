@@ -52,7 +52,7 @@ const FeatureProperties = () => {
           {data.map((details, index) => (
             <div key={index} className="property_sub_hotel">
               <div className="hotel_property_image">
-                <img src={details.img} alt="" />
+                <img className="fea" src={details.img} alt="" />
               </div>
 
               <h2 className="hotel_name">{details.hotel}</h2>

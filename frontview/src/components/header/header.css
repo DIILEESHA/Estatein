@@ -39,7 +39,7 @@
 }
 
 .header_line {
-  border-bottom: 10px solid var(--shade-gray3);
+  border-bottom: 8px solid var(--shade-gray2);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -145,11 +145,10 @@
 
 .property_linked_cards {
   display: grid;
-  border-bottom: 10px solid var(--shade-gray3);
+  border-bottom: 8px solid var(--shade-gray2);
   grid-template-columns: repeat(4, 1fr);
   padding: 10px;
   gap: 15px;
-  /* border-top: 10px solid var(--shade-gray3); */
   width: 100%;
   background-color: var(--shade-gray);
 }

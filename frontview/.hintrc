@@ -8,7 +8,8 @@
       {
         "ignore": [
           "width: fit-content",
-          "padding-inline"
+          "padding-inline",
+          "position: sticky"
         ]
       }
     ]

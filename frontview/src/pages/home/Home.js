@@ -1,20 +1,18 @@
 import React from "react";
-import SmNav from "../../components/smnav/SmNav";
-import Nav from "../../components/nav/Nav";
 import Header from "../../components/header/Header";
 import FeatureProperties from "../../components/feautrue-properties/FeatureProperties";
 import Client from "../../components/client/Client";
 import Faq from "../../components/faq/Faq";
+import Today from "../../components/today/Today";
 
 const Home = () => {
   return (
     <div>
-      <SmNav />
-      <Nav />
       <Header />
       <FeatureProperties />
       <Client />
       <Faq />
+      <Today />
     </div>
   );
 };

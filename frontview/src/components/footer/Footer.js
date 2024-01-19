@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const notify = () =>
+    toast.success("Great! You're all set! Cheers!", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  const onTestClick = (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      <h1>email cannot be empty</h1>;
+      toast.error("Email address cannot be empty", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
+
+    notify();
+    setEmail("");
+  };
   return (
     <div className="footer_container">
       <div className="footer_grid">
@@ -11,17 +46,21 @@ const Footer = () => {
           </div>
           <ul className="footer_ul">
             <li className="footer_li">
-              <form className="inputer">
+              <form onSubmit={onTestClick} className="inputer">
                 <input
                   type="email"
                   placeholder="Enter Your Email"
                   className="email_input"
-                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <div className="footer_imger c">
                   <button type="submit">
                     <img src="https://i.imgur.com/6YUT2Ys.png" alt="" />
                   </button>
+                  <div style={{ zIndex: "100000", position: "fixed" }}>
+                    <ToastContainer />
+                  </div>
                 </div>
                 <div className="footer_imger2 c">
                   <img src="https://i.imgur.com/slIUvW7.png" alt="" />

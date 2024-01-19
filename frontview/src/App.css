@@ -33,3 +33,8 @@ body {
   --shade-gray7: #808080;
   --shade-gray8: #999999;
 }
+
+.linka {
+  text-decoration: none;
+  color: inherit;
+}
