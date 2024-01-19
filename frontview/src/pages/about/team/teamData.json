@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/XelyLlH.png",
+    "name": "Max Mitchell",
+    "position": "Founder"
+  },
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/fLjepdF.png",
+    "name": "Sarah Johnson",
+    "position": "Chief Real Estate Officer"
+  },
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/SwRGrv6.png",
+    "name": "David Brown",
+    "position": "Head of Property Management"
+  },
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/fxcddNX.png",
+    "name": "Michael Turner",
+    "position": "Legal Counsel"
+  }
+]

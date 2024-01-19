@@ -1,19 +1,13 @@
-.arch_container {
+.exp_container {
   padding: 50px 80px;
   background-color: var(--shade-gray);
 }
-
-.me {
-  width: 90%;
-  /* margin-bottom: 30px; */
-}
-
-.arch_grid {
+.exp_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
+  gap: 15px;
 }
-.arch_sub_grid {
+.exp_sub_grid {
   border: 6px solid var(--shade-gray2);
   border-radius: 18px;
   height: auto;
@@ -23,7 +17,8 @@
   margin: 0 auto;
   position: relative;
 }
-.arch_details {
+
+.expo {
   height: 100%;
   padding: 30px;
   border: 1px solid var(--shade-gray3);
@@ -31,19 +26,26 @@
   border-radius: 12px;
 }
 
-.arch_title {
-  color: var(--main-white);
-  font-size: 19px;
+.exp_step {
+  /* color: #fff; */
+  color: var(--shade-gray8);
+
   line-height: 150%;
-  font-weight: 600;
-  margin-bottom: 20px;
+  font-size: 14px;
 }
 
-.arch_para {
-  width: 98%;
-  color: var(--shade-gray8);
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
+.exp_title{
+    color: var(--main-white);
+    font-size: 19px;
+    line-height: 150%;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 
+.exp_para{
+    width: 98%;
+    color: var(--shade-gray8);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 150%;
 }
