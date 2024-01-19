@@ -51,37 +51,41 @@
 
 .property_sub_hotel {
   border-radius: 12px;
-  padding: 20px;
+  padding: 23px;
   overflow: hidden;
 
   border: 1px solid var(--shade-gray3);
 }
-.hotel_property_image img {
+.hotel_property_image {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .fea {
   transform: translateZ(0);
-  transition: transform 2.5s ease-out;
-  overflow: hidden;
+  transition: transform 3s ease-out;
   width: 100%;
-  height: 40vh;
-  margin-bottom: 15px;
+  height: 255px;
+
+  /* height: 45vh; */
   object-fit: cover;
   border-radius: 10px;
 }
 
 .fea:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   overflow: hidden;
 }
 
 .hotel_name {
   color: var(--main-white);
   line-height: 150%;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 18px;
-  margin-bottom: 10px;
 }
 .hotel_property_para {
   color: var(--shade-gray8);
@@ -92,7 +96,15 @@
 .hotel_key_feautures {
   display: flex;
   gap: 7px;
+  overflow-x: auto;
   margin-bottom: 20px;
+  scrollbar-width: 1px;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+}
+
+.hotel_key_feautures::-webkit-scrollbar {
+  width: 20px;
 }
 .key_card {
   background-color: var(--shade-gray2);
