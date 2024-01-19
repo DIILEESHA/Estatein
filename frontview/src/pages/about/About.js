@@ -1,5 +1,7 @@
 import React from "react";
 import "./about.css";
+import "atropos/css";
+import Atropos from "atropos/react";
 
 const About = () => {
   return (
@@ -33,9 +35,19 @@ const About = () => {
           </div>
         </div>
         <div className="about_sub_grid">
-          <div className="about_grid_img">
-            <img src="https://i.imgur.com/nbmpD3a.png" alt="" />
-          </div>
+          <Atropos
+            activeOffset={0}
+            shadow={false}
+            highlight={true}
+            shadowScale={0}
+            onEnter={() => console.log("Enter")}
+            onLeave={() => console.log("Leave")}
+            onRotate={(x, y) => console.log("Rotate", x, y)}
+          >
+            <div className="about_grid_img">
+              <img src="https://i.imgur.com/nbmpD3a.png" alt="" />
+            </div>
+          </Atropos>
         </div>
       </div>
     </div>

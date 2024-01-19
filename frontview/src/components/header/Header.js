@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 
+
 const Header = () => {
   return (
     <div className="header_container">
@@ -41,7 +42,8 @@ const Header = () => {
         <div className="header_line"></div>
       </div>
       <div className="header_round_img">
-        <img src="https://i.imgur.com/DjShUDB.png" alt="" />
+     
+          <img src="https://i.imgur.com/DjShUDB.png" alt="" />
       </div>
 
       <div className="property_linked_cards">
