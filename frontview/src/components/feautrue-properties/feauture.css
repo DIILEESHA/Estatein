@@ -27,6 +27,7 @@
 .feature_btn button {
   height: 49px;
   background-color: var(--shade-gray2);
+  font-family: "Urbanist", sans-serif;
 
   border-radius: 8px;
   color: var(--main-white);
@@ -84,7 +85,7 @@
   background-color: var(--shade-gray2);
   border: 1px solid var(--shade-gray3);
   border-radius: 28px;
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 .key_image {
   display: flex;

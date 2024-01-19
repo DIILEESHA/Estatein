@@ -1,0 +1,18 @@
+.faq_container {
+  padding: 10px 80px 70px 80px;
+  background-color: var(--shade-gray);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-arrowss {
+    position: absolute;
+    bottom: -47%;
+    /* right: 0; */
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }

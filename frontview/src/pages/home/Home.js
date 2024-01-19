@@ -4,6 +4,7 @@ import Nav from "../../components/nav/Nav";
 import Header from "../../components/header/Header";
 import FeatureProperties from "../../components/feautrue-properties/FeatureProperties";
 import Client from "../../components/client/Client";
+import Faq from "../../components/faq/Faq";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <FeatureProperties />
       <Client />
+      <Faq />
     </div>
   );
 };
