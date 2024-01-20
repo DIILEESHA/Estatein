@@ -1,0 +1,35 @@
+.parallax {
+  overflow: hidden;
+  letter-spacing: -1px;
+  /* background-color: #fff; */
+  background-color: var(--shade-gray);
+
+  z-index: 10;
+  position: relative;
+  overflow-x: hidden;
+  /* margin: 10px 0; */
+  line-height: 1;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  margin: 20px;
+  font-size: 1.8em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--main-white);
+  text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+

@@ -2,6 +2,7 @@
   padding: 40px 80px;
   background-color: var(--shade-gray);
   border-top: 1px solid var(--shade-gray3);
+
   overflow: hidden;
 }
 .footer_grid {

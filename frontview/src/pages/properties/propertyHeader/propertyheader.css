@@ -1,0 +1,22 @@
+.property_container {
+  background-color: var(--shade-gray);
+}
+
+.property_container{
+  height: 40vh;
+  
+}
+.property_img {
+  height: 100%;
+  background-image: url("https://i.imgur.com/ocGKJan.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+

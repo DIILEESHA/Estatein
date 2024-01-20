@@ -103,7 +103,7 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div style={{ position: "absolute",zIndex:"10000" }}>
+      <div style={{ position: "absolute", zIndex: "10000" }}>
         <ToastContainer />
       </div>
     </div>

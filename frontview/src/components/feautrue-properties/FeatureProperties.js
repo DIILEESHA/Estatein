@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import data from "./data.json";
 
-const FeatureProperties = () => {
+const FeatureProperties = ({ title, para }) => {
   const CustomPrevArrow = ({ onClick }) => (
     <div className="custom-arrow custom-prev" onClick={onClick}>
       <img src="https://i.imgur.com/y2K6W3A.png" alt="" />
@@ -33,14 +33,10 @@ const FeatureProperties = () => {
         <img src="https://i.imgur.com/9wSj41l.png" alt="" />
       </div>
 
-      <h2 className="feature_title">Featured Properties</h2>
+      <h2 className="feature_title">{title}</h2>
 
       <div className="feature_para_details">
-        <p className="feature_para">
-          Explore our handpicked selection of featured properties. Each listing
-          offers a glimpse into exceptional homes and investments available
-          through Estatein. Click "View Details" for more information.
-        </p>
+        <p className="feature_para">{para}</p>
 
         <div className="feature_btn">
           <button>View All Properties</button>

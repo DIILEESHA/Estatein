@@ -1,5 +1,6 @@
 import React from "react";
 import "./today.css";
+import Section from '../velo/Section'
 const Today = () => {
   return (
     <div className="to">

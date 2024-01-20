@@ -25,7 +25,11 @@ const Nav = () => {
                 about us
               </NavLink>
             </li>
-            <li className="nav_li">properties</li>
+            <li className="nav_li">
+              <NavLink className="linka" to="/property">
+                properties
+              </NavLink>
+            </li>
             <li className="nav_li">services</li>
           </ul>
         </div>

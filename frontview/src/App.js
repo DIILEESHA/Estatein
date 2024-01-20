@@ -2,7 +2,8 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import Nav from "./components/nav/Nav";
 import Home from "./pages/home/Home";
-import MainAbout from "./pages/mainAbout/MainAbout";
+import MainAbout from "./pages/about/mainAbout/MainAbout";
+import MainProperty from "./pages/properties/mainProperty/MainProperty";
 import SmNav from "./components/smnav/SmNav";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<MainAbout />} />
+          <Route path="/property" element={<MainProperty />} />
         </Routes>
         <Footer />
       </BrowserRouter>
