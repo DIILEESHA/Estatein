@@ -7,10 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 const Team = () => {
   const [email, setEmail] = useState(Array(data.length).fill(""));
   const [emailError, setEmailError] = useState(Array(data.length).fill(""));
-  const notify = (index) => {
-    toast.success(` Your message has been sent successfully. Cheers!`, {
+
+  const notify = () => {
+    toast.success("Great! You're all set! Cheers!", {
       position: "top-left",
-      autoClose: 1000,
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -38,7 +39,7 @@ const Team = () => {
       return newErrors;
     });
 
-    notify(index);
+    notify();
     setEmail((prevEmails) => {
       const newEmails = [...prevEmails];
       newEmails[index] = "";
@@ -60,7 +61,7 @@ const Team = () => {
 
       <div className="team_grid">
         {data.map((team, index) => (
-          <div key={index._id} className="team_sub_grid">
+          <div key={index} className="team_sub_grid">
             <div className="team_person_img">
               <img src={team.img} alt={team.name} />
 
@@ -82,7 +83,7 @@ const Team = () => {
               <input
                 type="text"
                 placeholder="Say Hello to 👋"
-                className="team_input"
+                className={"team_input " + (emailError[index] ? "error" : "")}
                 value={email[index]}
                 onChange={(e) => {
                   const newEmails = [...email];
@@ -92,11 +93,7 @@ const Team = () => {
               />
               <div className="inputer_photo">
                 <button className="lk">
-                  <img
-                    src="
-                  https://i.imgur.com/qwbdgUB.png"
-                    alt=""
-                  />
+                  <img src="https://i.imgur.com/qwbdgUB.png" alt="" />
                 </button>
               </div>
             </form>
@@ -106,7 +103,7 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div style={{ zIndex: "10000", position: "absolute" }}>
+      <div style={{ position: "absolute",zIndex:"10000" }}>
         <ToastContainer />
       </div>
     </div>
