@@ -4,10 +4,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
+  const [emails, setEmails] = useState("");
   const notify = () =>
     toast.success("Great! You're all set! Cheers!", {
-      position: "bottom-left",
+      position: "top-left",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -19,10 +19,10 @@ const Footer = () => {
   const onTestClick = (e) => {
     e.preventDefault();
 
-    if (!email.trim()) {
+    if (!emails.trim()) {
       <h1>email cannot be empty</h1>;
       toast.error("Email address cannot be empty", {
-        position: "bottom-left",
+        position: "top-left",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -35,7 +35,7 @@ const Footer = () => {
     }
 
     notify();
-    setEmail("");
+    setEmails("");
   };
   return (
     <div className="footer_container">
@@ -51,16 +51,14 @@ const Footer = () => {
                   type="email"
                   placeholder="Enter Your Email"
                   className="email_input"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={emails}
+                  onChange={(e) => setEmails(e.target.value)}
                 />
                 <div className="footer_imger c">
                   <button type="submit">
                     <img src="https://i.imgur.com/6YUT2Ys.png" alt="" />
                   </button>
-                  <div style={{ zIndex: "100000", position: "fixed" }}>
-                    <ToastContainer />
-                  </div>
+               
                 </div>
                 <div className="footer_imger2 c">
                   <img src="https://i.imgur.com/slIUvW7.png" alt="" />
@@ -124,6 +122,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <div style={{ zIndex: "100000", position: "absolute" }}>
+                    <ToastContainer />
+                  </div>
     </div>
   );
 };
