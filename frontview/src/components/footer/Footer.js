@@ -58,7 +58,6 @@ const Footer = () => {
                   <button type="submit">
                     <img src="https://i.imgur.com/6YUT2Ys.png" alt="" />
                   </button>
-               
                 </div>
                 <div className="footer_imger2 c">
                   <img src="https://i.imgur.com/slIUvW7.png" alt="" />
@@ -123,8 +122,8 @@ const Footer = () => {
         </div>
       </div>
       <div style={{ zIndex: "100000", position: "absolute" }}>
-                    <ToastContainer />
-                  </div>
+        <ToastContainer />
+      </div>
     </div>
   );
 };

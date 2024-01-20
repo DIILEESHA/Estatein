@@ -10,9 +10,9 @@ const Team = () => {
   const notify = (index) => {
     toast.success(` Your message has been sent successfully. Cheers!`, {
       position: "top-left",
-      autoClose: 5000,
+      autoClose: 1000,
       hideProgressBar: false,
-      closeOnClick: false,
+      closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
