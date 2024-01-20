@@ -63,3 +63,50 @@
   line-height: 150%;
   font-weight: 500;
 }
+
+.team_inputer {
+  position: relative;
+  margin-top: 10px;
+}
+.team_input {
+  width: 100%;
+  background-color: var(--shade-gray2);
+  border-radius: 100px;
+  padding: 18px 20px;
+  outline: none;
+  color: #fff;
+  border: 1px solid var(--shade-gray3);
+}
+
+.team_input::placeholder {
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+}
+
+.inputer_photo {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lk {
+  border: none;
+  background-color: transparent;
+}
+
+.inputer_photo img {
+  width: 36px;
+  cursor: pointer;
+  height: 36px;
+}
+
+.error_message{
+  font-size: 12px;
+  margin:10px 0px ;
+  color: red;
+  font-weight: 600;
+}

@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "./team.css";
 import data from "./teamData.json";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Team = () => {
+  const [email, setEmail] = useState(Array(data.length).fill(""));
+  const [emailError, setEmailError] = useState(Array(data.length).fill(""));
+  const notify = (index) => {
+    toast.success(` Your message has been sent successfully. Cheers!`, {
+      position: "top-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
+  const onTestClick = (e, index) => {
+    e.preventDefault();
+
+    if (!email[index].trim()) {
+      setEmailError((prevErrors) => {
+        const newErrors = [...prevErrors];
+        newErrors[index] = "Text bar cannot be empty";
+        return newErrors;
+      });
+      return;
+    }
+
+    setEmailError((prevErrors) => {
+      const newErrors = [...prevErrors];
+      newErrors[index] = "";
+      return newErrors;
+    });
+
+    notify(index);
+    setEmail((prevEmails) => {
+      const newEmails = [...prevEmails];
+      newEmails[index] = "";
+      return newEmails;
+    });
+  };
+
   return (
     <div className="team_container">
       <div className="feautre_top_img">
@@ -22,13 +65,49 @@ const Team = () => {
               <img src={team.img} alt={team.name} />
 
               <div className="twitter">
-                <img className="twita" src="https://i.imgur.com/abl0MTx.png" alt="" />
+                <img
+                  className="twita"
+                  src="https://i.imgur.com/abl0MTx.png"
+                  alt=""
+                />
               </div>
             </div>
             <h2 className="team_name">{team.name}</h2>
             <h3 className="team_position">{team.position}</h3>
+
+            <form
+              onSubmit={(e) => onTestClick(e, index)}
+              className="team_inputer"
+            >
+              <input
+                type="text"
+                placeholder="Say Hello to 👋"
+                className="team_input"
+                value={email[index]}
+                onChange={(e) => {
+                  const newEmails = [...email];
+                  newEmails[index] = e.target.value;
+                  setEmail(newEmails);
+                }}
+              />
+              <div className="inputer_photo">
+                <button className="lk">
+                  <img
+                    src="
+                  https://i.imgur.com/qwbdgUB.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </form>
+            {emailError[index] && (
+              <h1 className="error_message">{emailError[index]}</h1>
+            )}
           </div>
         ))}
+      </div>
+      <div style={{ zIndex: "10000", position: "absolute" }}>
+        <ToastContainer />
       </div>
     </div>
   );
