@@ -1,5 +1,6 @@
 import React from "react";
 import "./connect.css";
+import Drop from "./Drop";
 const Connect = () => {
   return (
     <div className="connect_container">
@@ -58,61 +59,78 @@ const Connect = () => {
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">Preferred Location</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
+            <Drop
+              className="drop"
+              iconSrc=""
+              title="select location"
+              options={["since 90", "since 20", "newest"]}
             />
           </div>
         </div>{" "}
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">Property Type</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
+            <Drop
+              className="drop"
+              iconSrc=""
+              title="select property type"
+              options={["since 90", "since 20", "newest"]}
             />
           </div>
         </div>{" "}
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">No. of Bathrooms</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
+            <Drop
+              className="drop"
+              iconSrc=""
+              title="select no.of bathrooms"
+              options={["since 90", "since 20", "newest"]}
             />
           </div>
         </div>{" "}
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">No. of Bedrooms</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
+            <Drop
+              className="drop"
+              iconSrc=""
+              title="select no.of bedrooms"
+              options={["since 90", "since 20", "newest"]}
             />
           </div>
         </div>{" "}
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">Budget</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
+            <Drop
+              className="drop"
+              iconSrc=""
+              title="select budget"
+              options={["since 90", "since 20", "newest"]}
             />
           </div>
         </div>{" "}
         <div className="connect_sub_form">
           <div className="connect_input_section">
             <label htmlFor="">Preferred Contact Method</label>
-            <input
-              type="text"
-              placeholder="enter first name"
-              className="connect_input"
-            />
+            <div className="connecta">
+              <div className="imga">
+                <img
+                  src="
+                https://i.imgur.com/nVXZBX3.png"
+                  alt=""
+                />
+              </div>
+              <div className="imga2">
+                <img src="https://i.imgur.com/Qrk4IfK.png" alt="" />
+              </div>
+              <input
+                type="email"
+                placeholder="Enter Your Number"
+                className="connect_input og"
+              />
+            </div>
           </div>
         </div>{" "}
         <div className="connect_sub_form">
@@ -120,11 +138,24 @@ const Connect = () => {
             <label style={{ color: "transparent" }} htmlFor="">
               s
             </label>
-            <input
-              type="email"
-              placeholder="enter first name"
-              className="connect_input"
-            />
+
+            <div className="connecta">
+              <div className="imga">
+                <img
+                  src="
+                https://i.imgur.com/zc4E2VJ.png"
+                  alt=""
+                />
+              </div>
+              <div className="imga2">
+                <img src="https://i.imgur.com/e8aB0iq.png" alt="" />
+              </div>
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                className="connect_input og"
+              />
+            </div>
           </div>
         </div>{" "}
         <div className="connect_sub_form">
@@ -144,7 +175,6 @@ const Connect = () => {
         <div className="connect_sub_form">
           <input className="checker" type="checkbox" name="d" id="" />
           <label className="check" for="d">
-            {" "}
             I agree with Terms of Use and Privacy Policy
           </label>
         </div>

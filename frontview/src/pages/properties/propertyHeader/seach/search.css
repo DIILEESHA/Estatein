@@ -113,6 +113,7 @@
   text-transform: capitalize;
   gap: 10px;
   padding: 10px;
+  z-index: 1;
 }
 
 .drop_down_arrow {
@@ -135,6 +136,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  height: 40px;
   align-items: center;
 }
 
@@ -147,7 +149,7 @@
 
 .dropdown_text img {
   width: 20px;
-  height: 20pxF;
+  height: 20px;
 }
 
 .ira {
