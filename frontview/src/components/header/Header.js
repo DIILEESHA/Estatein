@@ -1,8 +1,14 @@
 import React from "react";
 import "./header.css";
-
+import CountUp, { useCountUp } from "react-countup";
 
 const Header = () => {
+  useCountUp({
+    ref: "counter",
+    end: 1234567,
+    enableScrollSpy: true,
+    scrollSpyDelay: 1000,
+  });
   return (
     <div className="header_container">
       <div className="header_grid">
@@ -21,15 +27,22 @@ const Header = () => {
           </div>
           <div className="properties_summary">
             <div className="property_card">
-              <h2 className="property_count">200+</h2>
+              <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={200} />+
+              </h2>
               <h3 className="property_title">happy customers</h3>
             </div>
             <div className="property_card">
-              <h2 className="property_count">10K+</h2>
+              <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={10} />
+                K+
+              </h2>
               <h3 className="property_title">Properties For Clients</h3>
             </div>
             <div className="property_card">
-              <h2 className="property_count">16+</h2>
+              <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={16} />+
+              </h2>
               <h3 className="property_title">Years of Experience</h3>
             </div>
           </div>
@@ -42,8 +55,7 @@ const Header = () => {
         <div className="header_line"></div>
       </div>
       <div className="header_round_img">
-     
-          <img src="https://i.imgur.com/DjShUDB.png" alt="" />
+        <img src="https://i.imgur.com/DjShUDB.png" alt="" />
       </div>
 
       <div className="property_linked_cards">
