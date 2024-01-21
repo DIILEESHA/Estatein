@@ -1,6 +1,5 @@
 import React from "react";
 import "./propertyheader.css";
-import Search from "./seach/Search";
 
 const PropertyHeader = () => {
   return (
