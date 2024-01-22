@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/WHHqnSv.png"
+  },
+  {
+    "id": 2,
+    "img": "https://i.imgur.com/t4Tc2MX.png"
+  },
+  {
+    "id": 3,
+    "img": "https://i.imgur.com/mwp1B8G.png"
+  },
+  {
+    "id": 4,
+    "img": "https://i.imgur.com/6QVgHOa.png"
+  },
+  {
+    "id": 5,
+    "img": "https://i.imgur.com/PCkj3Cu.png"
+  },
+  {
+    "id": 6,
+    "img": "https://i.imgur.com/m9oJUbP.png",
+    "title": "Explore Estatein's World",
+    "para": "Step inside the world of Estatein, where professionalism meets warmth, and expertise meets passion. Our gallery offers a glimpse into our team and workspaces, inviting you to get to know us better."
+  },
+  {
+    "id": 7,
+    "img": "https://i.imgur.com/DAAHSt9.png"
+  }
+]
