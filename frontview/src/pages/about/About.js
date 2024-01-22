@@ -1,9 +1,16 @@
 import React from "react";
 import "./about.css";
 import "atropos/css";
+import CountUp, { useCountUp } from "react-countup";
 import Atropos from "atropos/react";
 
 const About = () => {
+  useCountUp({
+    ref: "counter",
+    end: 1234567,
+    enableScrollSpy: true,
+    scrollSpyDelay: 1000,
+  });
   return (
     <div className="about_container">
       <div className="about_grid">
@@ -21,15 +28,22 @@ const About = () => {
           </p>
           <div className="properties_summary">
             <div className="property_card">
-              <h2 className="property_count">200+</h2>
+            <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={200} />+
+              </h2>
               <h3 className="property_title">happy customers</h3>
             </div>
             <div className="property_card">
-              <h2 className="property_count">10K+</h2>
+              <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={10} />
+                K+
+              </h2>
               <h3 className="property_title">Properties For Clients</h3>
             </div>
             <div className="property_card">
-              <h2 className="property_count">16+</h2>
+              <h2 className="property_count">
+                <CountUp enableScrollSpy duration={5} delay={3} end={16} />+
+              </h2>
               <h3 className="property_title">Years of Experience</h3>
             </div>
           </div>

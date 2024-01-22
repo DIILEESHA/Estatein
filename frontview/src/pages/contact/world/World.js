@@ -12,12 +12,15 @@ const World = () => {
               <div className="imgaw">
                 <img
                   className="dema"
+                  height={340}
+                  width={340}
                   src={datas.img}
                   alt=""
                   style={{
-                    width: datas.id === 6 ? "60px" : "",
-                    height: datas.id === 6 ? "100%" : "",
+                    width: datas.id === 6 ? "60px" : "100%",
+                    height: datas.id === 6 ? "30px" : "100%",
                     objectFit: datas.id === 6 ? "contain" : "",
+                    // margin:datas.id === 6 ? "-10px 0px 0px 0px ":""
                   }}
                 />
               </div>

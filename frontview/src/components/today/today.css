@@ -2,8 +2,23 @@
   background-color: var(--shade-gray);
   position: relative;
   border-top: 1px solid var(--shade-gray3);
-  
+
   height: 40vh;
+}
+
+.feature_btns button {
+  height: 49px;
+  background-color: var(--purple);
+  font-family: "Urbanist", sans-serif;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--main-white);
+  cursor: pointer;
+  border: 1px solid transparent;
+  line-height: 150%;
 }
 
 .too {
