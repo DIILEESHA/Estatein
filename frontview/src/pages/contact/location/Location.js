@@ -35,7 +35,7 @@ const Location = () => {
         <li className="location_li">
           <a
             href="/all"
-            className="linka"
+            className={selectedType === "all" ? "active" : "dam"}
             onClick={(event) => handleTypeChange(event, "all")}
           >
             all
@@ -44,7 +44,8 @@ const Location = () => {
         <li className="location_li">
           <a
             href="/regional"
-            className="linka"
+            // className="linka"
+            className={selectedType === "regional" ? "active" : "dam"}
             onClick={(event) => handleTypeChange(event, "regional")}
           >
             regional
@@ -53,7 +54,7 @@ const Location = () => {
         <li className="location_li">
           <a
             href="/international"
-            className="linka"
+            className={selectedType === "international" ? "active" : "dam"}
             onClick={(event) => handleTypeChange(event, "international")}
           >
             international
