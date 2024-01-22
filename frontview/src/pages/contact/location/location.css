@@ -1,8 +1,21 @@
 .location_container {
   background-color: var(--shade-gray);
   padding: 50px 80px;
+  overflow: hidden;
+}
+.location_fade-enter,
+.location_fade-exit,
+.location_fade-enter-active,
+.location_fade-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
 }
 
+.location_fade-enter-done,
+.location_fade-exit-done {
+  opacity: 1;
+  transition: opacity 200ms;
+}
 .location_ul {
   background-color: var(--shade-gray2);
   padding: 10px;

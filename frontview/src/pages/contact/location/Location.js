@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./location.css";
 import International from "./International";
+import { CSSTransition } from "react-transition-group";
 import All from "./All";
 import Regional from "./Regional";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Location = () => {
   const [selectedType, setSelectedType] = useState("all");
@@ -58,9 +60,32 @@ const Location = () => {
           </a>
         </li>
       </ul>
-      {selectedType === "all" && <All />}
-      {selectedType === "regional" && <International />}
-      {selectedType === "international" && <Regional />}
+      <CSSTransition
+        in={selectedType === "all"}
+        timeout={500}
+        classNames="location_fade"
+        unmountOnExit
+      >
+        <All />
+      </CSSTransition>
+
+      <CSSTransition
+        in={selectedType === "regional"}
+        timeout={500}
+        classNames="location_fade"
+        unmountOnExit
+      >
+        <International />
+      </CSSTransition>
+
+      <CSSTransition
+        in={selectedType === "international"}
+        timeout={500}
+        classNames="location_fade"
+        unmountOnExit
+      >
+        <Regional />
+      </CSSTransition>
     </div>
   );
 };
