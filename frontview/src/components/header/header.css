@@ -93,7 +93,7 @@
   background-color: transparent;
   border: 1px solid var(--shade-gray3);
   font-family: "Urbanist", sans-serif;
-
+cursor: pointer;
   line-height: 150%;
   color: #fff;
   text-transform: capitalize;
@@ -106,7 +106,7 @@
   height: 45px;
   background-color: var(--purple);
   font-family: "Urbanist", sans-serif;
-
+  cursor: pointer;
   color: #fff;
   border-radius: 8px;
   border: none;

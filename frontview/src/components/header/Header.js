@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import CountUp, { useCountUp } from "react-countup";
+import container from "../../asset/Container.webp";
 
 const Header = () => {
   useCountUp({
@@ -81,7 +82,7 @@ const Header = () => {
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img src="https://i.imgur.com/fS4Ulor.png" alt="" />
+            <img loading="lazy" src={container} alt="container" />
           </div>
           <h2 className="property_linked_title">
             Smart Investments, Informed Decisions
