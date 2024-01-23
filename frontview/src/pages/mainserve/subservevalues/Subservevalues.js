@@ -7,15 +7,15 @@ const Subservevalues = () => {
         <img src="https://i.imgur.com/9wSj41l.png" alt="" />
       </div>
 
-      <h2 className="feature_title">Unlock Property Value</h2>
+      <h2 className="feature_title">Effortless Property Management</h2>
 
       <div className="feature_para_details">
         <p className="feature_para">
-          Selling your property should be a rewarding experience, and at
-          Estatein, we make sure it is. Our Property Selling Service is designed
-          to maximize the value of your property, ensuring you get the best deal
-          possible. Explore the categories below to see how we can help you at
-          every step of your selling journey
+          Owning a property should be a pleasure, not a hassle. Estatein's
+          Property Management Service takes the stress out of property
+          ownership, offering comprehensive solutions tailored to your needs.
+          Explore the categories below to see how we can make property
+          management effortless for you
         </p>
       </div>
 
