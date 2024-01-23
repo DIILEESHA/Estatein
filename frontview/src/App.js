@@ -7,6 +7,7 @@ import MainProperty from "./pages/properties/mainProperty/MainProperty";
 import SmNav from "./components/smnav/SmNav";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import MainContact from "./pages/contact/maincontact/MainContact";
+import Mainserve from "./pages/mainserve/Mianserve";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<MainAbout />} />
           <Route path="/property" element={<MainProperty />} />
           <Route path="/contact" element={<MainContact />} />
+          <Route path="/service" element={<Mainserve />} />
         </Routes>
         <Footer />
       </BrowserRouter>
