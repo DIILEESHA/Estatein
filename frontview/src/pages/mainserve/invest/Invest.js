@@ -8,7 +8,7 @@ const Invest = () => {
       <div className="invest_grid">
         <div className="invest_sub_grid_points">
           <div className="feautre_top_img">
-            <img src="https://i.imgur.com/9wSj41l.png" alt="" />
+            <img src="https://i.imgur.com/9wSj41l.png" loading="lazy" alt="" />
           </div>
 
           <h2 className="feature_title">
@@ -39,7 +39,7 @@ const Invest = () => {
             {data.map((datas) => (
               <div className="serve_sub_grids sub_valuers">
                 <div className="serve_image_container">
-                  <img src={datas?.img} alt={datas.title} />
+                  <img src={datas?.img} loading="lazy" alt={datas.title} />
                   <h2 className="serve_value_title2">{datas?.title}</h2>
                 </div>
                 <div className="serve_value_para">{datas.para}</div>

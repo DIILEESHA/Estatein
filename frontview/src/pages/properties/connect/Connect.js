@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./connect.css";
 import Drop from "./Drop";
 const Connect = () => {
+  const [location, setLocation] = useState("Select Location");
+  const [property, setProperty] = useState(" select property type");
+  const [bathroom, setBathroom] = useState("select no.of bathrooms");
+  const [bedrooms, setBedrooms] = useState("select no.of bedrooms");
+  const [budget, setBudget] = useState("select budget");
+
+  const handleLocationSelect = (selectedLocation) => {
+    setLocation(selectedLocation);
+  };
+  const handleproperty = (selectedProperty) => {
+    setProperty(selectedProperty);
+  };
+  const handleBathroom = (selectedBathroom) => {
+    setBathroom(selectedBathroom);
+  };
+  const handleBedroom = (selectedBedhroom) => {
+    setBedrooms(selectedBedhroom);
+  };
+  const handleBudget = (selectedBudget) => {
+    setBudget(selectedBudget);
+  };
   return (
     <div className="connect_container">
       <div className="feautre_top_img">
@@ -21,6 +42,7 @@ const Connect = () => {
             <label htmlFor="">first name</label>
             <input
               type="text"
+              required
               placeholder="Enter First Name"
               className="connect_input"
             />
@@ -33,6 +55,7 @@ const Connect = () => {
               type="text"
               placeholder="Enter Last Name"
               className="connect_input"
+              required
             />
           </div>
         </div>{" "}
@@ -43,6 +66,7 @@ const Connect = () => {
               type="email"
               placeholder="Enter your Email"
               className="connect_input"
+              required
             />
           </div>
         </div>{" "}
@@ -53,6 +77,7 @@ const Connect = () => {
               type="text"
               placeholder="Enter Phone Number"
               className="connect_input"
+              required
             />
           </div>
         </div>{" "}
@@ -61,9 +86,11 @@ const Connect = () => {
             <label htmlFor="">Preferred Location</label>
             <Drop
               className="drop"
+              required
               iconSrc=""
-              title="select location"
-              options={["since 90", "since 20", "newest"]}
+              title={location}
+              options={["Mumbai", "kalkata", "maharasht"]}
+              onOptionSelect={handleLocationSelect}
             />
           </div>
         </div>{" "}
@@ -72,9 +99,11 @@ const Connect = () => {
             <label htmlFor="">Property Type</label>
             <Drop
               className="drop"
+              required
               iconSrc=""
-              title="select property type"
-              options={["since 90", "since 20", "newest"]}
+              title={property}
+              options={["villa", "hotel", "guest house"]}
+              onOptionSelect={handleproperty}
             />
           </div>
         </div>{" "}
@@ -84,8 +113,9 @@ const Connect = () => {
             <Drop
               className="drop"
               iconSrc=""
-              title="select no.of bathrooms"
-              options={["since 90", "since 20", "newest"]}
+              title={bathroom}
+              options={["Single bathroom", "2 bathrooms", "3 bathrooms"]}
+              onOptionSelect={handleBathroom}
             />
           </div>
         </div>{" "}
@@ -95,8 +125,9 @@ const Connect = () => {
             <Drop
               className="drop"
               iconSrc=""
-              title="select no.of bedrooms"
-              options={["since 90", "since 20", "newest"]}
+              title={bedrooms}
+              options={["single bedroom", "2 bedrooms", "3 bedrooms"]}
+              onOptionSelect={handleBedroom}
             />
           </div>
         </div>{" "}
@@ -106,8 +137,9 @@ const Connect = () => {
             <Drop
               className="drop"
               iconSrc=""
-              title="select budget"
-              options={["since 90", "since 20", "newest"]}
+              title={budget}
+              options={["10000$ - 20000$", "200k $+", "1000k $+"]}
+              onOptionSelect={handleBudget}
             />
           </div>
         </div>{" "}
