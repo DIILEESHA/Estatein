@@ -94,7 +94,7 @@ const FeatureProperties = ({ title, para }) => {
                     ...block,
                     children: block.children.map((child) => ({
                       ...child,
-                      text: child.text.split(" ").slice(0, 15).join(" ").concat('...'),
+                      text: child.text.split(" ").slice(0, 10).join(" ").concat('...'),
                     })),
                   }))}
                 />
