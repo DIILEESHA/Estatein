@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./feauture.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import data from "./data.json";
+import sanity from "../../sanity/Sanity";
+import { PortableText } from "@portabletext/react";
 
 const FeatureProperties = ({ title, para }) => {
+  const [property, setProperty] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchQuery = `*[_type == "hotels"]{
+    hotelname,
+    slug,
+    para,
+    price,
+    address,
+    images[]{asset->{_id,url}},
+    numBathrooms,
+    numBedrooms,
+    type
+
+  }`;
+        const res = await sanity.fetch(fetchQuery);
+        setProperty(res);
+        console.log("Fetched data:", res);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const CustomPrevArrow = ({ onClick }) => (
     <div className="custom-arrow custom-prev" onClick={onClick}>
       <img src="https://i.imgur.com/y2K6W3A.png" alt="" />
@@ -45,32 +74,53 @@ const FeatureProperties = ({ title, para }) => {
 
       <div className="property_hotel">
         <Slider {...settings}>
-          {data.map((details, index) => (
+          {property.map((details, index) => (
             <div key={index} className="property_sub_hotel">
               <div className="hotel_property_image">
-                <img className="fea" src={details.img} alt="" />
+                {details.images && details.images.length > 0 ? (
+                  <img
+                    className="fea"
+                    src={details.images[0].asset.url}
+                    alt=""
+                  />
+                ) : (
+                  <p>No images available</p>
+                )}
               </div>
-
-              <h2 className="hotel_name">{details.hotel}</h2>
-              <p className="hotel_property_para">{details.desc}</p>
+              <h2 className="hotel_name">{details.hotelname}</h2>
+              <p className="hotel_property_para">
+                <PortableText
+                  value={details.para.map((block) => ({
+                    ...block,
+                    children: block.children.map((child) => ({
+                      ...child,
+                      text: child.text.split(" ").slice(0, 10).join(" ").concat('...'),
+                    })),
+                  }))}
+                />
+              </p>
 
               <div className="hotel_key_feautures">
                 <div className="key_card">
                   <div className="key_image">
                     <img src="https://i.imgur.com/UhImtwb.png" alt="beds" />
-                    <h2 className="key_title">4-bedrooms</h2>
+                    <h2 className="key_title">
+                      {details.numBedrooms}-bedrooms
+                    </h2>
                   </div>
                 </div>
                 <div className="key_card">
                   <div className="key_image">
                     <img src="https://i.imgur.com/EIg2D7W.png" alt="beds" />
-                    <h2 className="key_title">3-bathrooms</h2>
+                    <h2 className="key_title">
+                      {details.numBathrooms}-bathrooms
+                    </h2>
                   </div>
                 </div>
                 <div className="key_card">
                   <div className="key_image">
                     <img src="https://i.imgur.com/pnZJT4K.png" alt="beds" />
-                    <h2 className="key_title">villa</h2>
+                    <h2 className="key_title">{details.type}</h2>
                   </div>
                 </div>
               </div>
@@ -78,7 +128,7 @@ const FeatureProperties = ({ title, para }) => {
               <div className="price_section">
                 <div className="hotel_price">
                   <h2 className="pricer">price</h2>
-                  <h2 className="hotel_price_count">{details.price}</h2>
+                  <h2 className="hotel_price_count">${details.price}</h2>
                 </div>
                 <div className="property_detail_btn">
                   <button>view property details</button>

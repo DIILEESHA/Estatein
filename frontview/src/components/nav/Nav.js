@@ -30,12 +30,20 @@ const Nav = () => {
                 properties
               </NavLink>
             </li>
-            <li className="nav_li">services</li>
+            <li className="nav_li">
+              <NavLink className="linka" to="/service">
+                services
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="nav_sub_grid">
           <ul className="nav_ul">
-            <li className="nav_li last">contact us</li>
+            <li className="nav_li last">
+              <Link className="linka" to="/contact">
+                contact us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

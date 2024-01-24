@@ -54,7 +54,7 @@ const Client = () => {
                 <img src="https://i.imgur.com/TxBfGzM.png" alt="" />
               </div>
               <h2 className="hotel_name">{client.text}</h2>
-              <p className="hotel_property_para">{client.para}</p>
+              <p className="hotel_property_para mis">{client.para.slice(0,140)}...</p>
 
               <div className="client_image_section">
                 <div className="client_profile_img">

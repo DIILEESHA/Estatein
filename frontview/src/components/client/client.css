@@ -12,7 +12,6 @@
   margin-bottom: 10px;
 }
 
-
 .client_card {
   border-radius: 12px;
   padding: 20px;
@@ -43,50 +42,52 @@
   line-height: 150%;
 }
 
-
 /* custom arrows for slider */
 
 .lines {
-    width: 99%;
-    margin: 0 auto;
-    background-color: var(--shade-gray3);
-    height: 1px;
-    position: relative;
-    margin-top: 30px;
-  }
-  
-  .custom-arrows {
-    position: absolute;
-    bottom: -40%;
-    /* right: 0; */
-    font-size: 15px;
-    color: white;
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
-  
-  .custom-prev {
-    right: 60px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    background-color: var(--shade-gray2);
-    border-radius: 50%;
-    border: 1px solid var(--shade-gray3);
-  }
-  
-  .custom-next {
-    right: 0px;
-    background-color: var(--shade-gray2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    border: 1px solid var(--shade-gray3);
-  }
-  
+  width: 99%;
+  margin: 0 auto;
+  background-color: var(--shade-gray3);
+  height: 1px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.mis {
+/* height: 12vh; */
+}
+
+.custom-arrows {
+  position: absolute;
+  bottom: -40%;
+  /* right: 0; */
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.custom-prev {
+  right: 60px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  background-color: var(--shade-gray2);
+  border-radius: 50%;
+  border: 1px solid var(--shade-gray3);
+}
+
+.custom-next {
+  right: 0px;
+  background-color: var(--shade-gray2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--shade-gray3);
+}

@@ -1,0 +1,71 @@
+.servicevalue_container {
+  padding: 50px 80px;
+  background-color: var(--shade-gray);
+}
+
+.serve_value_grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.serve_sub_grids {
+  padding: 30px 25px 30px 25px;
+  border: 1px solid var(--shade-gray3);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.serve_sub_grids:nth-child(5) {
+  grid-column: 2/4;
+}
+.btnerb {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 25px;
+  justify-content: flex-end;
+}
+
+.btnerb button {
+  height: 40px;
+  width: 111px;
+  color: #fff;
+  line-height: 150%;
+  text-transform: capitalize;
+  background-color: var(--shade-gray);
+  border: 1px solid var(--shade-gray3);
+  border-radius: 8px;
+  font-family: "Urbanist", sans-serif;
+  cursor: pointer;
+}
+
+.serve_image_container {
+  display: flex;
+  gap: 10px;
+  height: 7vh;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.serve_image_container img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.serve_value_title2 {
+  color: #fff;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 18px;
+}
+
+.serve_value_para {
+  color: var(--shade-gray8);
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+}

@@ -1,20 +1,23 @@
-// Dropdown.js
 import React, { useState } from "react";
-import '../propertyHeader/seach/search.css'
-import './connect.css'
+import "../propertyHeader/seach/search.css";
+import "./connect.css";
 
-const Dropdown = ({ iconSrc, title, options }) => {
+const Dropdown = ({ iconSrc, title, options, onOptionSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleOptionSelect = (option) => {
+    onOptionSelect(option);
+    toggleDropdown();
+  };
+
   return (
     <div className="sub_dropdowns sub">
       <div className="dropdown_sub" onClick={toggleDropdown}>
         <div className="dropdown_text">
-          {/* <img src={iconSrc} alt="" /> */}
           <div className="ira">|</div>
           <h2 className="dropdown_title mer">{title}</h2>
         </div>
@@ -23,7 +26,11 @@ const Dropdown = ({ iconSrc, title, options }) => {
             "-"
           ) : (
             <div>
-              <img className="arrow" src="https://i.imgur.com/FfenEad.png" alt="" />
+              <img
+                className="arrow"
+                src="https://i.imgur.com/FfenEad.png"
+                alt=""
+              />
             </div>
           )}
         </div>
@@ -31,7 +38,11 @@ const Dropdown = ({ iconSrc, title, options }) => {
       {isOpen && (
         <div className="options">
           {options.map((option, index) => (
-            <div key={index} className="sub_options">
+            <div
+              key={index}
+              className="sub_options"
+              onClick={() => handleOptionSelect(option)}
+            >
               {option}
             </div>
           ))}
