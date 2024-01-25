@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import sanity from "../../sanity/Sanity";
 import { PortableText } from "@portabletext/react";
+import { Link } from "react-router-dom";
 
 const FeatureProperties = ({ title, para }) => {
   const [property, setProperty] = useState([]);
@@ -94,7 +95,11 @@ const FeatureProperties = ({ title, para }) => {
                     ...block,
                     children: block.children.map((child) => ({
                       ...child,
-                      text: child.text.split(" ").slice(0, 10).join(" ").concat('...'),
+                      text: child.text
+                        .split(" ")
+                        .slice(0, 10)
+                        .join(" ")
+                        .concat("..."),
                     })),
                   }))}
                 />
@@ -131,7 +136,13 @@ const FeatureProperties = ({ title, para }) => {
                   <h2 className="hotel_price_count">${details.price}</h2>
                 </div>
                 <div className="property_detail_btn">
-                  <button>view property details</button>
+                  <Link
+                    className="linka"
+                    to={`/property/${details.slug?.current}`}
+                    key={details.slug?.current}
+                  >
+                    <button>view property details</button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -12,6 +12,7 @@ const MainProperty = () => {
       <Search />
       <SearchFeatureProperties />
       <Connect />
+
       <Today />
     </div>
   );
