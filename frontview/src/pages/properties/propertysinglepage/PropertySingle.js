@@ -14,14 +14,18 @@ const PropertySingle = () => {
   const [property, setProperty] = useState(null);
 
   const CustomPrevArrow = ({ onClick }) => (
-    <div className="custom-arrowers custom-previous" onClick={onClick}>
-      <img src="https://i.imgur.com/y2K6W3A.png" alt="" />
+    <div className="custom-arrowers custom-previouser" onClick={onClick}>
+      <img
+        className="mera2"
+        src="https://i.imgur.com/k0gtS23.png"
+        alt=""
+      />
     </div>
   );
 
   const CustomNextArrow = ({ onClick }) => (
     <div className="custom-arrowers custom-nexters" onClick={onClick}>
-      <img src="https://i.imgur.com/LJapvlt.png" alt="" />
+      <img className="mera" src="https://i.imgur.com/LJapvlt.png" alt="" />
     </div>
   );
   useEffect(() => {
@@ -100,7 +104,7 @@ const PropertySingle = () => {
           <Slider {...navSliderSettings} ref={(slider) => setNavSlider(slider)}>
             {property?.images?.map((image, index) => (
               <div className="small_single" key={index}>
-                <img src={image?.asset?.url} alt="" />
+                <img loading="lazy" src={image?.asset?.url} alt="" />
               </div>
             ))}
           </Slider>
@@ -112,7 +116,11 @@ const PropertySingle = () => {
           >
             {property?.images?.map((image, index) => (
               <div className="single_pro" key={index}>
-                <img src={image?.asset?.url} alt={property.hotelname} />
+                <img
+                  loading="lazy"
+                  src={image?.asset?.url}
+                  alt={property.hotelname}
+                />
               </div>
             ))}
           </Slider>

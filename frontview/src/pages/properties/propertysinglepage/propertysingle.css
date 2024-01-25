@@ -32,6 +32,18 @@
   color: var(--shade-gray8);
   text-transform: capitalize;
 }
+
+.custom-arrowers .mera2 {
+  height: 10px;
+  object-fit: contain;
+  width: 10px;
+}
+.custom-arrowers .mera {
+  height: 15px;
+  object-fit: contain;
+  width: 15px;
+}
+
 .property_price_count {
   font-size: 20px;
   line-height: 150%;
@@ -148,7 +160,7 @@
   bottom: 0;
 }
 
-.custom-previous {
+.custom-previouser {
   left: 0;
   display: none;
   height: 35px;
@@ -157,9 +169,14 @@
   align-items: center;
   justify-content: center;
   width: 35px;
-  background-color: var(--shade-gray2);
   border-radius: 100px;
-  border: 1px solid var(--shade-gray3);
+  background-color: var(--shade-gray2);
+  border: 1px solid var(--shade-gray8);
+}
+
+.custom-arrowers:hover {
+  background-color: #703bf7;
+  border: 1px solid transparent;
 }
 
 .custom-nexters {
@@ -172,5 +189,5 @@
   width: 35px;
   background-color: var(--shade-gray2);
   border-radius: 100px;
-  border: 1px solid var(--shade-gray3);
+  border: 1px solid var(--shade-gray8);
 }
