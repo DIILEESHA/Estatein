@@ -8,7 +8,7 @@ import SmNav from "./components/smnav/SmNav";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import MainContact from "./pages/contact/maincontact/MainContact";
 import Mainserve from "./pages/mainserve/Mianserve";
-import PropertySingle from "./pages/properties/propertysinglepage/PropertySingle";
+import MainPropertySingle from "./pages/properties/mainprosingle/Mainpropertysingle/MainPropertySingle";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/property" element={<MainProperty />} />
           <Route path="/contact" element={<MainContact />} />
           <Route path="/service" element={<Mainserve />} />
-          <Route path="/property/:slug" element={<PropertySingle />} />
+          <Route path="/property/:slug" element={<MainPropertySingle />} />
         </Routes>
         <Footer />
       </BrowserRouter>

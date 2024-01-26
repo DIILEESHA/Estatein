@@ -4,8 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useParams } from "react-router-dom";
-import Sanity from "../../../sanity/Sanity";
+import Sanity from "../../../../sanity/Sanity";
 import { PortableText } from "@portabletext/react";
+import Inquiry from "../inquiry/Inquiry";
 
 const PropertySingle = () => {
   const { slug } = useParams();
@@ -15,11 +16,7 @@ const PropertySingle = () => {
 
   const CustomPrevArrow = ({ onClick }) => (
     <div className="custom-arrowers custom-previouser" onClick={onClick}>
-      <img
-        className="mera2"
-        src="https://i.imgur.com/k0gtS23.png"
-        alt=""
-      />
+      <img className="mera2" src="https://i.imgur.com/k0gtS23.png" alt="" />
     </div>
   );
 
@@ -40,7 +37,9 @@ const PropertySingle = () => {
             images[]{asset->{_id,url}},
             numBathrooms,
             numBedrooms,
-            type
+            type,
+            area,
+            features
         }`;
 
         const res = await Sanity.fetch(singleQuery);
@@ -56,7 +55,7 @@ const PropertySingle = () => {
   const mainSliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1900,
     slidesToShow: 2,
     slidesToScroll: 1,
     asNavFor: navSlider,
@@ -79,7 +78,7 @@ const PropertySingle = () => {
     nextArrow: <CustomNextArrow />,
   };
   return (
-    <div className="property_container">
+    <div className="propertya_container">
       <div className="property_single_top">
         <div className="property_single_address_container">
           <h2 className="property_single_address">{property?.hotelname}</h2>
@@ -126,6 +125,64 @@ const PropertySingle = () => {
           </Slider>
         </div>
       </div>
+
+      <div className="property_single_other_grid">
+        <div className="property_other_sub">
+          <h2 className="property_other_title">Description</h2>
+          <p className="property_other_para">
+            <PortableText value={property?.para} />
+          </p>
+
+          <div className="property_other_line"></div>
+          <div className="property_other_sub_details">
+            <div className="property_other_substers">
+              <div className="property_other_top">
+                <img src="https://i.imgur.com/rOmzVkx.png" alt="" />
+                <h3 className="be">Bedrooms</h3>
+              </div>
+              <h2 className="other_count">0{property?.numBedrooms}</h2>
+            </div>
+            <div className="property_other_substers neow">
+              <div className="property_other_top">
+                <img src="https://i.imgur.com/bO6rQoH.png" alt="" />
+                <h3 className="be">Bathrooms</h3>
+              </div>
+              <h2 className="other_count">0{property?.numBathrooms}</h2>
+            </div>
+            <div className="property_other_substers neow">
+              <div className="property_other_top">
+                <img src="https://i.imgur.com/ll2FUYD.png" alt="" />
+                <h3 className="be">Area</h3>
+              </div>
+              <h2 className="other_count">
+                {property?.area}
+
+                <span className="rus">Square Feet</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="property_other_sub">
+          <h2 className="property_other_title">Key Features and Amenities</h2>
+
+          <ul className="property_other_ul">
+            {property?.features &&
+              property?.features.map((feature, index) => (
+                <li key={index} className="property_other_li">
+                  <img
+                    className="lia"
+                    src="https://i.imgur.com/uA1MNhY.png"
+                    alt=""
+                  />
+                  {feature}
+                </li>
+              ))}
+          </ul>
+        </div>
+      </div>
+      <>
+        <Inquiry title={property?.hotelname} loaction={property?.address} />
+      </>
     </div>
   );
 };
