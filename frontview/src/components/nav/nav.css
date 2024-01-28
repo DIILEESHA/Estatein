@@ -74,7 +74,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1074px) {
+@media screen and (max-width: 1165px) {
   .nav_sub_grid:nth-child(1) {
     padding-inline: 40px;
   }
@@ -161,3 +161,7 @@
     font-weight: 500;
   }
 }
+
+
+
+

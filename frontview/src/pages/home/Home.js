@@ -9,8 +9,8 @@ import Section from "../../components/velo/Section";
 const Home = () => {
   return (
     <div>
-      {/* <Header />
-      <HomeFeatureProperties  />
+      <Header />
+      {/* <HomeFeatureProperties  />
       <Client />
       <Faq />
       <Section />

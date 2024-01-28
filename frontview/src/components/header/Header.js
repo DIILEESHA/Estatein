@@ -56,25 +56,26 @@ const Header = () => {
         <div className="header_line"></div>
       </div>
       <div className="header_round_img">
-        <img       loading="lazy"   src="https://i.imgur.com/DjShUDB.png" alt="" />
+        <img loading="lazy" src="https://i.imgur.com/DjShUDB.png" alt="" />
       </div>
 
-      <div className="property_linked_cards">
+     <div className="lop">
+     <div className="property_linked_cards">
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img       loading="lazy"   src="https://i.imgur.com/W1gEE3D.png" alt="" />
+            <img loading="lazy" src="https://i.imgur.com/W1gEE3D.png" alt="" />
           </div>
           <h2 className="property_linked_title">Find Your Dream Home</h2>
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img       loading="lazy"   src="https://i.imgur.com/9a4ouSN.png" alt="" />
+            <img loading="lazy" src="https://i.imgur.com/9a4ouSN.png" alt="" />
           </div>
           <h2 className="property_linked_title">Unlock Property Value</h2>
         </div>{" "}
         <div className="property_linked_card">
           <div className="property_linked_img">
-            <img        loading="lazy"  src="https://i.imgur.com/EbFvvxX.png" alt="" />
+            <img loading="lazy" src="https://i.imgur.com/EbFvvxX.png" alt="" />
           </div>
           <h2 className="property_linked_title">
             Effortless Property Management
@@ -89,10 +90,11 @@ const Header = () => {
             />
           </div>
           <h2 className="property_linked_title">
-            Smart Investments, Informed Decisions
+            Smart Investments & Decisions
           </h2>
         </div>
       </div>
+     </div>
     </div>
   );
 };
