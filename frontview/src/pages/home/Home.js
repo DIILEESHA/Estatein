@@ -9,12 +9,12 @@ import Section from "../../components/velo/Section";
 const Home = () => {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <HomeFeatureProperties  />
       <Client />
       <Faq />
       <Section />
-      <Today />
+      <Today /> */}
     </div>
   );
 };

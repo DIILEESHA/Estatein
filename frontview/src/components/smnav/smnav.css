@@ -78,3 +78,23 @@
   text-transform: capitalize;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1126px) {
+  .smnav_title {
+    font-size: 13px;
+  }
+  .smnav_btn {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 556px) {
+  .smnav_title {
+    font-size: 12px;
+  }
+  .smnav_btn {
+    font-size: 12px;
+  }
+  .close_btn {
+    right: 10px;
+  }
+}
