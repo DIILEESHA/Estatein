@@ -118,16 +118,49 @@ const Nav = () => {
 
                 <div className="nav_mobile_line"></div>
                 <div className="social_mobile_icons">
-                  <CiFacebook className="socil_mobile"/>
-                  <CiTwitter className="socil_mobile"/>
-                  <CiYoutube className="socil_mobile"/>
+                  <CiFacebook className="socil_mobile" />
+                  <CiTwitter className="socil_mobile" />
+                  <CiYoutube className="socil_mobile" />
                 </div>
                 <section>
                   <li className="nav_mobile_li">home</li>
-                  <li className="nav_mobile_li">about</li>
-                  <li className="nav_mobile_li">contact</li>
-                  <li className="nav_mobile_li">property</li>
-                  <li className="nav_mobile_li">services</li>
+                  <li className="nav_mobile_li">
+                    <NavLink
+                      className="linka"
+                      to="/about"
+                      onClick={() => handleNavLinkClick("/about")}
+                    >
+                      about us
+                    </NavLink>
+                  </li>
+                  <li className="nav_mobile_li">
+                    <NavLink
+                      className="linka"
+                      to="/property"
+                      onClick={() => handleNavLinkClick("/property")}
+                    >
+                      properties
+                    </NavLink>
+                  </li>
+                  <li className="nav_mobile_li">
+                    <NavLink
+                      className="linka"
+                      to="/service"
+                      onClick={() => handleNavLinkClick("/service")}
+                    >
+                      services
+                    </NavLink>
+                  </li>
+                  <li className="nav_mobile_li">
+                    {" "}
+                    <Link
+                      className="linka"
+                      to="/contact"
+                      onClick={() => handleNavLinkClick("/contact")}
+                    >
+                      contact us
+                    </Link>
+                  </li>
                 </section>
                 <div className="copyright">Design & Developed by DILEESHA</div>
               </ul>

@@ -156,5 +156,8 @@
   .copyright {
     position: fixed;
     bottom: 30px;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
   }
 }

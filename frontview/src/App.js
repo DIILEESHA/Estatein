@@ -9,12 +9,19 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import MainContact from "./pages/contact/maincontact/MainContact";
 import Mainserve from "./pages/mainserve/Mianserve";
 import MainPropertySingle from "./pages/properties/mainprosingle/Mainpropertysingle/MainPropertySingle";
+import { useState } from "react";
 
 function App() {
+  const [close, setClose] = useState(true);
+
+  const closer = () => {
+    setClose(!true);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
-        <SmNav />
+        {close && <SmNav closer={closer} />}
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
