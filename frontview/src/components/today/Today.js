@@ -21,7 +21,7 @@ const Today = () => {
                 personalized assistance.
               </p>
 
-              <div className="feature_btns">
+              <div className="feature_btns sxz">
                 <button className="neon">Explore Properties</button>
               </div>
             </div>

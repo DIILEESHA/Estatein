@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import {HomeFeatureProperties} from "../../components/feautrue-properties/CustomFeatureProperties";
+import { HomeFeatureProperties } from "../../components/feautrue-properties/CustomFeatureProperties";
 import Client from "../../components/client/Client";
 import Faq from "../../components/faq/Faq";
 import Today from "../../components/today/Today";
@@ -10,11 +10,11 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <HomeFeatureProperties  />
-      {/* <Client />
+      <HomeFeatureProperties />
+      <Client />
       <Faq />
       <Section />
-      <Today /> */}
+      <Today />
     </div>
   );
 };

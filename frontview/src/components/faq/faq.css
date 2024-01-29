@@ -7,12 +7,32 @@
 }
 
 .custom-arrowss {
-    position: absolute;
-    bottom: -47%;
-    /* right: 0; */
-    font-size: 15px;
-    color: white;
-    cursor: pointer;
-    border: none;
-    outline: none;
+  position: absolute;
+  bottom: -47%;
+  /* right: 0; */
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 1165px) {
+  .faq_container {
+    padding: 40px 40px 70px 40px;
   }
+}
+
+@media screen and (max-width: 855px) {
+  .sliders .slick-slide > div {
+    margin: 0 4px;
+  }
+  .suka button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .faq_container {
+    padding: 40px 20px 70px 20px;
+  }
+}

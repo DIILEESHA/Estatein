@@ -2,7 +2,10 @@
   background-color: var(--shade-gray);
   position: relative;
   border-top: 1px solid var(--shade-gray3);
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   height: 40vh;
 }
 
@@ -44,9 +47,43 @@
   height: 100%;
   background: url("https://i.imgur.com/9hsU4S6.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .today_img {
+}
+
+@media screen and (max-width: 1165px) {
+  .too {
+    padding: 10px 40px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .sxz button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .today {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .too {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .today {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 353px) {
+  .today {
+    height: 70vh;
+  }
 }

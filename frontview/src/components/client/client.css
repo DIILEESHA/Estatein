@@ -54,7 +54,7 @@
 }
 
 .mis {
-/* height: 12vh; */
+  /* height: 12vh; */
 }
 
 .custom-arrows {
@@ -90,4 +90,21 @@
   width: 48px;
   border-radius: 50%;
   border: 1px solid var(--shade-gray3);
+}
+
+@media screen and (max-width: 1165px) {
+  .client_container {
+    padding: 40px 40px 70px 40px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .sliders .slick-slide > div {
+    margin: 0 4px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .client_container {
+    padding: 40px 20px 70px 20px;
+  }
 }

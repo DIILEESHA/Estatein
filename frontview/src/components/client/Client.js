@@ -27,6 +27,25 @@ const Client = () => {
     className: "sliders",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -54,7 +73,9 @@ const Client = () => {
                 <img src="https://i.imgur.com/TxBfGzM.png" alt="" />
               </div>
               <h2 className="hotel_name">{client.text}</h2>
-              <p className="hotel_property_para mis">{client.para.slice(0,140)}...</p>
+              <p className="hotel_property_para mis">
+                {client.para.slice(0, 140)}...
+              </p>
 
               <div className="client_image_section">
                 <div className="client_profile_img">

@@ -26,6 +26,25 @@ const Faq = () => {
     className: "sliders",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="faq_container">
@@ -52,7 +71,7 @@ const Faq = () => {
             <div key={index} className="property_sub_hotel">
               <h2 className="hotel_name">{client.title}</h2>
               <p className="hotel_property_para">{client.para}</p>
-              <div className="feature_btn">
+              <div className="feature_btn suka">
                 <button>Read More</button>
               </div>
             </div>
