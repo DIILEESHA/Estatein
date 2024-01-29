@@ -89,11 +89,11 @@ const Nav = () => {
             <div className="nav_lis" onClick={() => setOpen(!open)}>
               {open ? (
                 <>
-                  <img src="https://i.imgur.com/2BR135G.png" alt="" />
+                  <img className="thusa" src="https://i.imgur.com/2BR135G.png" alt="" />
                 </>
               ) : (
                 <>
-                  <img src="https://i.imgur.com/gCNjZrm.png" alt="" />
+                  <img className="thusa" src="https://i.imgur.com/gCNjZrm.png" alt="" />
                 </>
               )}
             </div>
@@ -123,8 +123,8 @@ const Nav = () => {
                   <CiYoutube className="socil_mobile" />
                 </div>
                 <section>
-                  <li className="nav_mobile_li">home</li>
-                  <li className="nav_mobile_li">
+                  <li className="nav_mobile_li" >home</li>
+                  <li className="nav_mobile_li" >
                     <NavLink
                       className="linka"
                       to="/about"
@@ -133,7 +133,7 @@ const Nav = () => {
                       about us
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li">
+                  <li className="nav_mobile_li" >
                     <NavLink
                       className="linka"
                       to="/property"
@@ -142,7 +142,7 @@ const Nav = () => {
                       properties
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li">
+                  <li className="nav_mobile_li" >
                     <NavLink
                       className="linka"
                       to="/service"
@@ -151,7 +151,7 @@ const Nav = () => {
                       services
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li">
+                  <li className="nav_mobile_li" >
                     {" "}
                     <Link
                       className="linka"
