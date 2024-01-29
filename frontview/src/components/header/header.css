@@ -347,7 +347,8 @@
   }
 
   .header_background img {
-    height: 302px;
+    height: 45vh;
+    border-radius: 12px;
   }
 
   .header_title {

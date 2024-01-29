@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-      {/* <HomeFeatureProperties  />
-      <Client />
+      <HomeFeatureProperties  />
+      {/* <Client />
       <Faq />
       <Section />
       <Today /> */}

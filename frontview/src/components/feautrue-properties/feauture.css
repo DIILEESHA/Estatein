@@ -51,7 +51,7 @@
 
 .property_sub_hotel {
   border-radius: 12px;
-  padding: 23px;
+  padding: 19px;
   overflow: hidden;
   border: 1px solid var(--shade-gray3);
 }
@@ -67,6 +67,8 @@
   transition: transform 3s ease-out;
   width: 100%;
   height: 255px;
+  object-fit: cover;
+  object-position: center;
 
   /* height: 45vh; */
   object-fit: cover;
@@ -94,28 +96,35 @@
 }
 .hotel_key_feautures {
   display: flex;
-  gap: 7px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+
   margin-bottom: 20px;
-  scrollbar-width: 1px;
-  scrollbar-color: transparent transparent;
-  -ms-overflow-style: none;
+  gap: 7px;
+  /* overflow-x: auto; */
+  /* scrollbar-width: 1px; */
+  /* scrollbar-color: transparent transparent; */
+  /* -ms-overflow-style: none; */
 }
 
 .hotel_key_feautures::-webkit-scrollbar {
-  width: 20px;
+  /* width: 20px; */
 }
 .key_card {
   background-color: var(--shade-gray2);
   border: 1px solid var(--shade-gray3);
   border-radius: 28px;
-  padding: 5px 10px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 .key_image {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  padding: 10px;
+  height: 100%;
 }
 
 .key_image img {
@@ -208,4 +217,46 @@
   width: 48px;
   border-radius: 50%;
   border: 1px solid var(--shade-gray3);
+}
+
+@media screen and (max-width: 1165px) {
+  .feauture_container {
+    padding: 40px 40px 70px 40px;
+  }
+}
+@media screen and (max-width: 1142px) {
+  .feature_title {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .feature_para_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    gap: 30px;
+  }
+  .feature_para {
+    width: 100%;
+  }
+
+  .property_hotel {
+    margin-top: 30px;
+  }
+  .feature_btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sliders .slick-slide > div {
+    margin: 0 4px;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .feauture_container {
+    padding: 40px 20px 70px 20px;
+  }
 }

@@ -56,7 +56,34 @@ const FeatureProperties = ({ title, para }) => {
     className: "sliders",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
     <div className="feauture_container">
       <div className="feautre_top_img">
@@ -88,7 +115,7 @@ const FeatureProperties = ({ title, para }) => {
                   <p>No images available</p>
                 )}
               </div>
-              <h2 className="hotel_name">{details.hotelname}</h2>
+              <h2 className="hotel_name">{details.hotelname.slice(0, 15)}</h2>
               <p className="hotel_property_para">
                 <PortableText
                   value={details.para.map((block) => ({
