@@ -104,9 +104,43 @@
   height: 36px;
 }
 
-.error_message{
+.error_message {
   font-size: 12px;
-  margin:10px 0px ;
+  margin: 10px 0px;
   color: red;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1185px) {
+  .team_container {
+    padding: 50px 40px;
+  }
+
+  .team_position {
+    white-space: initial;
+  }
+}
+
+@media screen and (max-width: 1011px) {
+  .team_grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media screen and (max-width: 758px) {
+  .team_container {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 643px) {
+  .team_person_img img {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .team_grid {
+    display: flex;
+    flex-direction: column;
+  }
 }

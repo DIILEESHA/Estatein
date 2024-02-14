@@ -22,7 +22,11 @@ const values = () => {
               <div className="value_ke_detail_box">
                 <div className="value_img_section">
                   <div className="value_key_img">
-                    <img src="https://i.imgur.com/A2qXRiy.png" alt="" />
+                    <img
+                      loading="lazy"
+                      src="https://i.imgur.com/A2qXRiy.png"
+                      alt=""
+                    />
                   </div>
                   <h2 className="value_key">Trust</h2>
                 </div>
@@ -54,7 +58,11 @@ const values = () => {
               <div className="value_ke_detail_box">
                 <div className="value_img_section">
                   <div className="value_key_img">
-                    <img src="https://i.imgur.com/8niyGoz.png" alt="" />
+                    <img
+                      loading="lazy"
+                      src="https://i.imgur.com/8niyGoz.png"
+                      alt=""
+                    />
                   </div>
                   <h2 className="value_key">Client-Centric</h2>
                 </div>
@@ -69,7 +77,11 @@ const values = () => {
               <div className="value_ke_detail_box">
                 <div className="value_img_section">
                   <div className="value_key_img">
-                    <img src="https://i.imgur.com/QXPa4Bx.png" alt="" />
+                    <img
+                      loading="lazy"
+                      src="https://i.imgur.com/QXPa4Bx.png"
+                      alt=""
+                    />
                   </div>
                   <h2 className="value_key">Our Commitment</h2>
                 </div>

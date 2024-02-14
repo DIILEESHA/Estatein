@@ -11,7 +11,7 @@ const Mianserve = () => {
       <ServiceContact />
       <ServiceValue />
       <Subservevalues />
-      <Invest />
+      {/* <Invest /> */}
       <Today />
     </div>
   );

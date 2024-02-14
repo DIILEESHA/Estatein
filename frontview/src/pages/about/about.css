@@ -6,6 +6,7 @@
 .about_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 .about_sub_grid {
   display: flex;
@@ -34,4 +35,25 @@
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1185px) {
+  .about_container {
+    padding: 50px 40px;
+    background-color: var(--shade-gray);
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .about_container {
+    padding: 30px 20px;
+    background-color: var(--shade-gray);
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .about_grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
 }

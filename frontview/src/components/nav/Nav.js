@@ -25,6 +25,11 @@ const Nav = () => {
     scrollToTop();
   };
 
+  const handleMobileNavLinkClick = (path) => {
+    handleNavLinkClick(path); // Call handleNavLinkClick function
+    setOpen(!open); // Toggle the state of 'open'
+  };
+
   return (
     <div className="nav_container">
       <div className="nav_grid">
@@ -89,11 +94,19 @@ const Nav = () => {
             <div className="nav_lis" onClick={() => setOpen(!open)}>
               {open ? (
                 <>
-                  <img className="thusa" src="https://i.imgur.com/2BR135G.png" alt="" />
+                  <img
+                    className="thusa"
+                    src="https://i.imgur.com/2BR135G.png"
+                    alt=""
+                  />
                 </>
               ) : (
                 <>
-                  <img className="thusa" src="https://i.imgur.com/gCNjZrm.png" alt="" />
+                  <img
+                    className="thusa"
+                    src="https://i.imgur.com/gCNjZrm.png"
+                    alt=""
+                  />
                 </>
               )}
             </div>
@@ -123,40 +136,49 @@ const Nav = () => {
                   <CiYoutube className="socil_mobile" />
                 </div>
                 <section>
-                  <li className="nav_mobile_li" >home</li>
-                  <li className="nav_mobile_li" >
+                  <li className="nav_mobile_li">
+                    {" "}
+                    <NavLink
+                      className="linka"
+                      to="/"
+                      onClick={() => handleMobileNavLinkClick("/")}
+                    >
+                      home
+                    </NavLink>
+                  </li>
+                  <li className="nav_mobile_li">
                     <NavLink
                       className="linka"
                       to="/about"
-                      onClick={() => handleNavLinkClick("/about")}
+                      onClick={() => handleMobileNavLinkClick("/about")}
                     >
                       about us
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li" >
+                  <li className="nav_mobile_li">
                     <NavLink
                       className="linka"
                       to="/property"
-                      onClick={() => handleNavLinkClick("/property")}
+                      onClick={() => handleMobileNavLinkClick("/property")}
                     >
                       properties
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li" >
+                  <li className="nav_mobile_li">
                     <NavLink
                       className="linka"
                       to="/service"
-                      onClick={() => handleNavLinkClick("/service")}
+                      onClick={() => handleMobileNavLinkClick("/service")}
                     >
                       services
                     </NavLink>
                   </li>
-                  <li className="nav_mobile_li" >
+                  <li className="nav_mobile_li">
                     {" "}
                     <Link
                       className="linka"
                       to="/contact"
-                      onClick={() => handleNavLinkClick("/contact")}
+                      onClick={() => handleMobileNavLinkClick("/contact")}
                     >
                       contact us
                     </Link>
