@@ -31,7 +31,7 @@ function App() {
           <Route path="/service" element={<Mainserve />} />
           <Route path="/property/:slug" element={<MainPropertySingle />} />
         </Routes>
-        {/* <Footer /> */}
+         <Footer /> 
       </BrowserRouter>
     </div>
   );
